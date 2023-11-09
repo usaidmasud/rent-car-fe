@@ -6,7 +6,7 @@ import {
 
 export const initialStateFilter: FilterResponseModel = {
   page: 1,
-  pageSize: 10,
+  per_page: 10,
 };
 
 export const initialStateGlobalResponseModel: GlobalResponseModel = {
@@ -14,9 +14,12 @@ export const initialStateGlobalResponseModel: GlobalResponseModel = {
   message: '',
   totalItems: 0,
   meta: {
-    lastPage: 1,
-    prevPage: null,
-    nextPage: null,
+    current_page: 1,
+    from: 1,
+    last_page: 1,
+    links:[],
+    per_page: 10,
+    
   },
 };
 

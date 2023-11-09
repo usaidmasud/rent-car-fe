@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
+import carSlice from './features/car.slice';
 import rootSlice from './features/root.slice';
 
 export const store = configureStore({
   reducer: {
     rootSlice,
+    carSlice
   },
 });
 
