@@ -1,11 +1,12 @@
-import { configureStore } from '@reduxjs/toolkit';
-import carSlice from './features/car.slice';
-import rootSlice from './features/root.slice';
-
+import { configureStore } from "@reduxjs/toolkit";
+import carSlice from "./features/car.slice";
+import rootSlice from "./features/root.slice";
+import transactionSlice from "./features/transaction.slice";
 export const store = configureStore({
   reducer: {
     rootSlice,
-    carSlice
+    carSlice,
+    transactionSlice,
   },
 });
 

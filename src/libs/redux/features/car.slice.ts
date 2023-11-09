@@ -17,6 +17,7 @@ import {
   interface CarProps extends InitialResponseModel {
     optionSelect: DefaultOptionType[];
     row: DataCar;
+    selected:string
   }
   const defaultOptionSelect = [
     {
@@ -28,6 +29,7 @@ import {
     ...initialStateResponseModel,
     optionSelect: defaultOptionSelect,
     row: {} as DataCar,
+    selected:""
   };
   
   export const getListCar = createAsyncThunk(
@@ -55,6 +57,9 @@ import {
       reset: () => initialState,
       setFilterCar: (state, action: PayloadAction<FilterResponseModel>) => {
         state.filter = action.payload;
+      },
+      setSelectedCar: (state, action: PayloadAction<string>) => {
+        state.selected = action.payload;
       },
     },
     extraReducers: (builder) => {
@@ -101,7 +106,7 @@ import {
     },
   });
   
-  export const { reset, setFilterCar } = carSlice.actions;
+  export const { reset, setFilterCar, setSelectedCar } = carSlice.actions;
   
   export default carSlice.reducer;
   

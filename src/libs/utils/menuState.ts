@@ -11,4 +11,15 @@ export const MENU_STATE = {
     BUTTON_SAVE: 'Simpan',
     BUTTON_UPDATE: 'Update',
   },
+  TRANSACTION: {
+    MENU: 'Peminjaman',
+    PAGE_TITLE: 'Peminjaman',
+    DESCRIPTION: 'Riwayat Peminjaman',
+    PAGE_TITLE_CREATE: 'Tambah Peminjaman',
+    PAGE_TITLE_EDIT: 'Edit Peminjaman',
+    PAGE_TITLE_DETAIL: 'Detail Peminjaman',
+    BUTTON_CREATE: 'Pinjaman Baru',
+    BUTTON_SAVE: 'Simpan',
+    BUTTON_UPDATE: 'Update',
+  },
 };
