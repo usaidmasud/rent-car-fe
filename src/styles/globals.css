@@ -2,26 +2,234 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+  /* background-color: transparent; */
+  background-image: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.ant-btn-primary {
+  color: #fff;
+  background-color: #1677ff;
+  box-shadow: 0 2px 0 rgba(5, 145, 255, 0.1);
+}
+/* sider */
+.ant-layout .ant-layout-sider-light {
+  @apply bg-sidebar-main;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.ant-menu-light .ant-menu-item-group-title {
+  @apply text-xs font-bold uppercase leading-6 text-white;
 }
+
+.ant-menu-light .ant-menu-item-selected {
+  @apply bg-secondary-light text-sidebar-main;
+}
+
+.ant-menu-light .ant-menu-submenu-selected > .ant-menu-submenu-title {
+  @apply bg-secondary-light text-sidebar-main;
+}
+.ant-menu-light
+  .ant-menu-submenu-title:hover:not(.ant-menu-item-selected):not(
+    .ant-menu-submenu-selected
+  ) {
+  @apply bg-secondary-light text-sidebar-main;
+}
+.ant-menu-light:not(.ant-menu-horizontal)
+  .ant-menu-item:not(.ant-menu-item-selected):hover,
+.ant-menu-light
+  > .ant-menu:not(.ant-menu-horizontal)
+  .ant-menu-item:not(.ant-menu-item-selected):hover {
+  @apply bg-secondary-light text-sidebar-main;
+}
+
+.ant-menu-light .ant-menu-item-active {
+  @apply bg-secondary-light text-sidebar-main;
+}
+
+.ant-layout .ant-layout-sider-light .ant-layout-sider-trigger {
+  @apply bg-primary-ring text-gray-800;
+}
+/* ./sider */
+
+/* date picker */
+.ant-picker-dropdown
+  .ant-picker-cell-in-view.ant-picker-cell-selected
+  .ant-picker-cell-inner {
+  @apply bg-primary-dark text-white;
+}
+
+.ant-picker-dropdown
+  .ant-picker-cell-in-view.ant-picker-cell-selected
+  .ant-picker-cell-inner,
+.ant-picker-dropdown
+  .ant-picker-cell-in-view.ant-picker-cell-range-start
+  .ant-picker-cell-inner,
+.ant-picker-dropdown
+  .ant-picker-cell-in-view.ant-picker-cell-range-end
+  .ant-picker-cell-inner {
+  color: #fff;
+  background: #df711b;
+}
+
+.ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner::before {
+  position: absolute;
+  top: 0;
+  inset-inline-end: 0;
+  bottom: 0;
+  inset-inline-start: 0;
+  z-index: 1;
+  border: 1px solid #df711b;
+  border-radius: 4px;
+  content: '';
+}
+
+.ant-picker-dropdown
+  .ant-picker-cell-in-view.ant-picker-cell-today
+  .ant-picker-cell-inner::before {
+  @apply border-primary-dark;
+}
+
+.ant-picker-dropdown.ant-picker-today-btn {
+  @apply text-gray-700;
+}
+
+.ant-picker-dropdown .ant-picker-today-btn:hover {
+  @apply text-primary-dark;
+}
+.ant-picker:hover,
+.ant-picker-focused {
+  @apply border-e border-primary-dark;
+}
+
+.ant-picker-dropdown .ant-picker-header-view button:hover {
+  @apply text-primary-dark;
+}
+
+.ant-picker .ant-picker-input > input:focus,
+.ant-picker .ant-picker-input > input-focused {
+  border-color: #df711b;
+  box-shadow: 0 0 0 2px rgba(5, 145, 255, 0.1);
+  border-inline-end-width: 1px;
+  outline: 0;
+}
+/* ./date picker */
+
+/* select */
+.ant-select:not(.ant-select-disabled):not(.ant-select-customize-input):not(
+    .ant-pagination-size-changer
+  ):hover
+  .ant-select-selector {
+  @apply border-primary-dark;
+}
+
+.ant-select-focused .ant-select-selector,
+.ant-select-selector:focus,
+.ant-select-selector:active,
+.ant-select-open .ant-select-selector {
+  border-color: #df711b !important;
+  box-shadow: none !important;
+}
+
+/* ./select */
+
+/* input number */
+input:where(:not([type])):focus,
+[type='email']:focus,
+[type='url']:focus,
+[type='password']:focus,
+[type='number']:focus,
+[type='date']:focus,
+[type='datetime-local']:focus,
+[type='month']:focus,
+/* [type='search']:focus, */
+[type='tel']:focus,
+[type='time']:focus,
+[type='week']:focus,
+[multiple]:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  --tw-ring-inset: var(--tw-empty, /*!*/ /*!*/);
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: #eb985a;
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
+    var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
+    calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+    var(--tw-shadow);
+  border-color: #df711b;
+}
+input:where(:not([type])):focus,
+[type='search']:focus,
+[multiple]:focus,
+textarea:focus,
+select:focus {
+  outline: 0px solid transparent;
+  outline-offset: 2px;
+  --tw-ring-inset: var(--tw-empty, /*!*/ /*!*/);
+  /* --tw-ring-offset-width: 0px; */
+  --tw-ring-offset-color: #fff;
+  /* --tw-ring-color: #eb985a; */
+  /* --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 */
+  /* var(--tw-ring-offset-width) var(--tw-ring-offset-color); */
+  /* --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 */
+  /* calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color); */
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+    var(--tw-shadow);
+  border-color: #df711b;
+}
+/* ./input number */
+
+/* pagination */
+.ant-table-wrapper .ant-table-pagination.ant-pagination {
+  @apply p-6;
+}
+
+.ant-pagination .ant-pagination-item-active {
+  @apply border-primary-main bg-white font-semibold;
+}
+
+.ant-pagination .ant-pagination-item-active a {
+  @apply text-primary-main;
+}
+
+/* ./pagination */
+/* radio */
+.ant-radio-group-solid
+  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+  @apply border-primary-ring bg-primary-main text-white;
+}
+
+.ant-radio-button-wrapper:hover {
+  @apply relative text-gray-800;
+}
+
+:where(
+    .css-dev-only-do-not-override-fpg3f5
+  ).ant-radio-button-wrapper-checked:not(
+    .ant-radio-button-wrapper-disabled
+  )::before {
+  @apply bg-primary-main;
+}
+
+.ant-radio-group-solid
+  .ant-radio-button-wrapper-checked:not(
+    .ant-radio-button-wrapper-disabled
+  ):hover {
+  @apply border-primary-ring bg-primary-main text-white;
+}
+
+.ant-radio-button-wrapper-checked:not(
+    .ant-radio-button-wrapper-disabled
+  ):hover::before {
+  @apply bg-primary-main;
+}
+/* ./radio */
