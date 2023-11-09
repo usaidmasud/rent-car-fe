@@ -1,5 +1,7 @@
 /* eslint-disable no-unused-vars */
 export const enum MESSAGE_STATE {
+  REGISTER_SUCCESS = 'Register berhasil',
+  REGISTER_FAIL = 'Register gagal',
   STORE_SUCCESS = 'Data berhasil di simpan',
   STORE_FAIL = 'Data gagal di simpan',
   DELETE_SUCCESS = 'Data berhasil dihapus',

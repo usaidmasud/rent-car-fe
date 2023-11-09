@@ -1,9 +1,7 @@
+import RegisterPage from "@/ui/pages/Auth/RegisterPage";
 
 function Register() {
-  return (
-    <div className="">hello</div>
-  )
-  // return <RegisterPage />;
+  return <RegisterPage />;
 }
 
 export default Register;

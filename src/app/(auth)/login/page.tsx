@@ -1,7 +1,8 @@
+import LoginPage from "@/ui/pages/Auth/LoginPage";
 
 function Login() {
   return (
-    <div className="">hello</div>
+    <LoginPage />
   )
 }
 

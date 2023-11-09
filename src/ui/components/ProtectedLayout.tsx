@@ -6,7 +6,6 @@ import { useEffect } from 'react';
 type Props = {
   children: React.ReactElement;
 };
-
 /*
     add the requireAuth property to the page component
     to protect the page from unauthenticated users
