@@ -12,7 +12,6 @@ export const initialStateFilter: FilterResponseModel = {
 export const initialStateGlobalResponseModel: GlobalResponseModel = {
   data: [],
   message: '',
-  totalItems: 0,
   meta: {
     current_page: 1,
     from: 1,

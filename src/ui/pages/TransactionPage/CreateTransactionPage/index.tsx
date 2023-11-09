@@ -8,7 +8,7 @@ import { AppDispatch } from "@/libs/redux/store";
 import { useDispatch } from "react-redux";
 import { getListCar, setFilterCar } from "@/libs/redux/features/car.slice";
 
-function CreateCarPage() {
+function CreateTransactionPage() {
   const dispatch: AppDispatch = useDispatch();
   const initialFetch = useCallback(() => {
     dispatch(
@@ -37,4 +37,4 @@ function CreateCarPage() {
   );
 }
 
-export default CreateCarPage;
+export default CreateTransactionPage;

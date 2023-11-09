@@ -54,7 +54,7 @@ function Item({
 }: DataCar) {
   return (
     <div className="relative w-full h-36">
-      <Image fill className="w-full" src={process.env.NEXT_PUBLIC_IMAGE_URL + photo} alt={merk} />
+      <Image fill className="w-full" src={process.env.NEXT_PUBLIC_IMAGE_URL! + photo} alt={merk} />
       <div className="">
         <p className="">{currency(rental_fee)} /hari</p>
       </div>

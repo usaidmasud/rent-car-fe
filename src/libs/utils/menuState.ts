@@ -22,4 +22,15 @@ export const MENU_STATE = {
     BUTTON_SAVE: 'Simpan',
     BUTTON_UPDATE: 'Update',
   },
+  RETURN_TRANSACTION: {
+    MENU: 'Pengembalian',
+    PAGE_TITLE: 'Pengembalian',
+    DESCRIPTION: 'Riwayat Pengembalian',
+    PAGE_TITLE_CREATE: 'Tambah Pengembalian',
+    PAGE_TITLE_EDIT: 'Edit Pengembalian',
+    PAGE_TITLE_DETAIL: 'Detail Pengembalian',
+    BUTTON_CREATE: 'Proses Pengembalian ',
+    BUTTON_SAVE: 'Simpan',
+    BUTTON_UPDATE: 'Update',
+  },
 };
